@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aNe-8Z-AAU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,154 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iLyrics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iLYRICS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryE-BI-6Jg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="e74-1V-P3S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3gE-LF-vNb">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" rowHeight="80" id="OO9-yN-9WU" customClass="SongCell" customModule="iLyrics" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OO9-yN-9WU" id="Pa2-OF-nkg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1Z-te-Ach">
+                                                    <rect key="frame" x="16" y="8" width="343" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="Fib-lb-Vwp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Id-Bg-DOZ">
+                                                    <rect key="frame" x="16" y="40" width="343" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="o4L-Gc-9Sk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="h1Z-te-Ach" secondAttribute="trailing" constant="16" id="Bxf-SW-bYO"/>
+                                                <constraint firstItem="1Id-Bg-DOZ" firstAttribute="leading" secondItem="Pa2-OF-nkg" secondAttribute="leading" constant="16" id="JEc-qY-3Se"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Id-Bg-DOZ" secondAttribute="trailing" constant="16" id="Jlp-Ha-JBI"/>
+                                                <constraint firstItem="h1Z-te-Ach" firstAttribute="leading" secondItem="Pa2-OF-nkg" secondAttribute="leading" constant="16" id="f8d-HZ-jWg"/>
+                                                <constraint firstItem="1Id-Bg-DOZ" firstAttribute="top" secondItem="h1Z-te-Ach" secondAttribute="bottom" constant="8" id="kTU-so-MM3"/>
+                                                <constraint firstItem="h1Z-te-Ach" firstAttribute="top" secondItem="Pa2-OF-nkg" secondAttribute="top" constant="8" id="xW5-9C-VxM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistName" destination="h1Z-te-Ach" id="XGh-hc-Afk"/>
+                                            <outlet property="songName" destination="1Id-Bg-DOZ" id="0Qu-aQ-yos"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cet-W9-ATP">
+                                <rect key="frame" x="177" y="631" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ryE-BI-6Jg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5x9-NW-CbZ"/>
+                            <constraint firstItem="3gE-LF-vNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EhK-oW-dqj"/>
+                            <constraint firstItem="ryE-BI-6Jg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Q6s-nY-mNM"/>
+                            <constraint firstItem="cet-W9-ATP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QnA-Ys-t0K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cet-W9-ATP" secondAttribute="bottom" constant="16" id="YMi-MU-6ch"/>
+                            <constraint firstItem="ryE-BI-6Jg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hfN-6B-ucq"/>
+                            <constraint firstItem="3gE-LF-vNb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hsc-I2-rw3"/>
+                            <constraint firstItem="3gE-LF-vNb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hyx-Lg-V9z"/>
+                            <constraint firstItem="3gE-LF-vNb" firstAttribute="top" secondItem="ryE-BI-6Jg" secondAttribute="bottom" id="qow-hi-4Vq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vuJ-UP-gmh"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="cet-W9-ATP" id="w4N-aX-7RX"/>
+                        <outlet property="tableView" destination="3gE-LF-vNb" id="J5T-hn-xAW"/>
+                        <outlet property="titleLabel" destination="ryE-BI-6Jg" id="sSX-Rn-66a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Lyric View Controller-->
+        <scene sceneID="Yvq-ki-OsY">
+            <objects>
+                <viewController storyboardIdentifier="lyricDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p2q-Gb-NKd" customClass="LyricViewController" customModule="iLyrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KD1-wf-TA4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lyrics of the song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVx-ID-f6W">
+                                <rect key="frame" x="0.0" y="30" width="375" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading up..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ulB-D1-9j5">
+                                <rect key="frame" x="16" y="61" width="343" height="606"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ulB-D1-9j5" firstAttribute="leading" secondItem="MYR-dR-vH7" secondAttribute="leading" constant="16" id="88x-gn-Fjo"/>
+                            <constraint firstItem="bVx-ID-f6W" firstAttribute="top" secondItem="MYR-dR-vH7" secondAttribute="top" constant="10" id="Bno-aN-7AU"/>
+                            <constraint firstItem="ulB-D1-9j5" firstAttribute="bottom" secondItem="MYR-dR-vH7" secondAttribute="bottom" id="F7f-mV-QdD"/>
+                            <constraint firstItem="ulB-D1-9j5" firstAttribute="top" secondItem="bVx-ID-f6W" secondAttribute="bottom" constant="7.5" id="I1p-bm-hP5"/>
+                            <constraint firstItem="MYR-dR-vH7" firstAttribute="trailing" secondItem="ulB-D1-9j5" secondAttribute="trailing" constant="16" id="Pn8-i6-E3G"/>
+                            <constraint firstItem="bVx-ID-f6W" firstAttribute="trailing" secondItem="MYR-dR-vH7" secondAttribute="trailing" id="fUC-Jo-Xyw"/>
+                            <constraint firstItem="bVx-ID-f6W" firstAttribute="leading" secondItem="MYR-dR-vH7" secondAttribute="leading" id="qzX-f0-ALL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MYR-dR-vH7"/>
+                    </view>
+                    <connections>
+                        <outlet property="lyricView" destination="ulB-D1-9j5" id="u13-kx-I6c"/>
+                        <outlet property="titleLabel" destination="bVx-ID-f6W" id="EDC-dy-qRS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWh-Yx-tLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1909.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Slf-YX-qMk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aNe-8Z-AAU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ue-zR-gBc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vfd-PI-wJ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxz-4T-vQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="134"/>
         </scene>
     </scenes>
 </document>

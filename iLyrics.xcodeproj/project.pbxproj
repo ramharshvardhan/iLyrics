@@ -14,6 +14,10 @@
 		DFAB15F420DECB03008B432A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAB15F220DECB03008B432A /* LaunchScreen.storyboard */; };
 		DFAB15FF20DECB04008B432A /* iLyricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB15FE20DECB04008B432A /* iLyricsTests.swift */; };
 		DFAB160A20DECB04008B432A /* iLyricsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB160920DECB04008B432A /* iLyricsUITests.swift */; };
+		DFAB161C20DECE0B008B432A /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB161B20DECE0B008B432A /* SongService.swift */; };
+		DFAB161F20DECE73008B432A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB161E20DECE73008B432A /* Song.swift */; };
+		DFAB162320DED198008B432A /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB162220DED198008B432A /* SongCell.swift */; };
+		DFAB162520DED6B6008B432A /* LyricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB162420DED6B6008B432A /* LyricViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		DFAB160520DECB04008B432A /* iLyricsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iLyricsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAB160920DECB04008B432A /* iLyricsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iLyricsUITests.swift; sourceTree = "<group>"; };
 		DFAB160B20DECB04008B432A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFAB161B20DECE0B008B432A /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
+		DFAB161E20DECE73008B432A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		DFAB162220DED198008B432A /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		DFAB162420DED6B6008B432A /* LyricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +105,11 @@
 		DFAB15E820DECB01008B432A /* iLyrics */ = {
 			isa = PBXGroup;
 			children = (
+				DFAB161920DECB85008B432A /* Controllers */,
+				DFAB161820DECB7F008B432A /* View */,
+				DFAB161720DECB77008B432A /* Model */,
 				DFAB15E920DECB01008B432A /* AppDelegate.swift */,
-				DFAB15EB20DECB01008B432A /* ViewController.swift */,
-				DFAB15ED20DECB01008B432A /* Main.storyboard */,
 				DFAB15F020DECB03008B432A /* Assets.xcassets */,
-				DFAB15F220DECB03008B432A /* LaunchScreen.storyboard */,
 				DFAB15F520DECB03008B432A /* Info.plist */,
 			);
 			path = iLyrics;
@@ -123,6 +131,66 @@
 				DFAB160B20DECB04008B432A /* Info.plist */,
 			);
 			path = iLyricsUITests;
+			sourceTree = "<group>";
+		};
+		DFAB161720DECB77008B432A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB161D20DECE66008B432A /* Model objects */,
+				DFAB161A20DECDE7008B432A /* Networking */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DFAB161820DECB7F008B432A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB15ED20DECB01008B432A /* Main.storyboard */,
+				DFAB15F220DECB03008B432A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DFAB161920DECB85008B432A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB162120DED184008B432A /* Cells */,
+				DFAB162020DED179008B432A /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DFAB161A20DECDE7008B432A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB161B20DECE0B008B432A /* SongService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DFAB161D20DECE66008B432A /* Model objects */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB161E20DECE73008B432A /* Song.swift */,
+			);
+			path = "Model objects";
+			sourceTree = "<group>";
+		};
+		DFAB162020DED179008B432A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB15EB20DECB01008B432A /* ViewController.swift */,
+				DFAB162420DED6B6008B432A /* LyricViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DFAB162120DED184008B432A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB162220DED198008B432A /* SongCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAB161F20DECE73008B432A /* Song.swift in Sources */,
 				DFAB15EC20DECB01008B432A /* ViewController.swift in Sources */,
 				DFAB15EA20DECB01008B432A /* AppDelegate.swift in Sources */,
+				DFAB162320DED198008B432A /* SongCell.swift in Sources */,
+				DFAB162520DED6B6008B432A /* LyricViewController.swift in Sources */,
+				DFAB161C20DECE0B008B432A /* SongService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

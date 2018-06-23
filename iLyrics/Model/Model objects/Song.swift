@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct Song {
+    let artistName: String
+    let songName: String
+    let songUrl: String
+    
+    init(_ payload: [String: AnyObject]) {
+        self.artistName = payload["artistName"] as? String ?? ""
+        self.songName = payload["name"] as? String ?? ""
+        self.songUrl = payload["url"] as? String ?? ""
+    }
+}
+
+
